@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skillswap - Student Skill Sharing Platform</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">Skillswap</div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#share">Share a Skill</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <section class="hero">
+            <h1>Welcome to Skillswap</h1>
+            <p>Connect, learn, and share skills with fellow students!</p>
+            <a href="#share" class="cta-btn" id="open-modal">Share Your Skill</a>
+        </section>
+    </header>
+    <main>
+        <section id="about" class="about-section">
+            <h2>About Skillswap</h2>
+            <p>Skillswap is a platform for students to share and learn new skills from each other. Discover talents, connect with peers, and grow together!</p>
+        </section>
+        <section id="skills" class="skills-section">
+            <h2>Available Skills</h2>
+            <div class="filter-bar">
+                <input type="text" id="search-bar" placeholder="Search skills...">
+                <select id="category-filter">
+                    <option value="">All Categories</option>
+                    <option value="Programming">Programming</option>
+                    <option value="Music">Music</option>
+                    <option value="Art">Art</option>
+                    <option value="Public Speaking">Public Speaking</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+            <div class="skills-container" id="skills-container">
+                <!-- Skill cards will be injected by JS -->
+            </div>
+        </section>
+        <section id="share" class="share-section">
+            <h2>Share a Skill</h2>
+            <form id="skill-form">
+                <input type="text" id="skill-name" placeholder="Skill Name" required>
+                <input type="text" id="student-name" placeholder="Your Name" required>
+                <select id="skill-category" required>
+                    <option value="">Select Category</option>
+                    <option value="Programming">Programming</option>
+                    <option value="Music">Music</option>
+                    <option value="Art">Art</option>
+                    <option value="Public Speaking">Public Speaking</option>
+                    <option value="Other">Other</option>
+                </select>
+                <textarea id="skill-desc" placeholder="Skill Description" required></textarea>
+                <button type="submit">Share</button>
+            </form>
+        </section>
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <span class="close" id="close-modal">&times;</span>
+                <h2>Share a Skill</h2>
+                <form id="modal-skill-form">
+                    <input type="text" id="modal-skill-name" placeholder="Skill Name" required>
+                    <input type="text" id="modal-student-name" placeholder="Your Name" required>
+                    <select id="modal-skill-category" required>
+                        <option value="">Select Category</option>
+                        <option value="Programming">Programming</option>
+                        <option value="Music">Music</option>
+                        <option value="Art">Art</option>
+                        <option value="Public Speaking">Public Speaking</option>
+                        <option value="Other">Other</option>
+                    </select>
+                    <textarea id="modal-skill-desc" placeholder="Skill Description" required></textarea>
+                    <button type="submit">Share</button>
+                </form>
+            </div>
+        </div>
+        <button id="back-to-top" title="Back to Top">&#8679;</button>
+    </main>
+    <footer id="contact">
+        <p>Contact us at <a href="mailto:info@skillswap.com">info@skillswap.com</a></p>
+        <p>&copy; 2025 Skillswap. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
